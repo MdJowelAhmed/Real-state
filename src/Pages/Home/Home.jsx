@@ -1,4 +1,6 @@
+import Footer from "../../Components/ShareComponents/Footer";
 import Navbar from "../../Components/ShareComponents/Navbar";
+import Banner from "./Banner";
 
  
 
@@ -6,7 +8,8 @@ const Home = () => {
     return (
         <div>
             <Navbar></Navbar>
-           <h2>This is Home page</h2> 
+           <Banner></Banner>
+           <Footer></Footer>
         </div>
     );
 };
