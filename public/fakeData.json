@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "estate_title": "Luxury Beach Resort",
+      "segment_name": "Resort",
+      "description": "Experience ultimate luxury at our beachfront resort with stunning ocean views.",
+      "price": "$500",
+      "status": "rent",
+      "area": "5000sqft",
+      "location": "Beachfront, Malibu",
+      "facilities": ["Ocean View Rooms", "Infinity Pool", "Spa", "Gourmet Dining"],
+      "image": "beach_resort.jpg"
+    },
+    {
+      "id": 2,
+      "estate_title": "Cozy Mountain Lodge",
+      "segment_name": "Lodge",
+      "description": "Escape to the mountains and enjoy a cozy stay in our rustic lodge surrounded by nature.",
+      "price": "$300",
+      "status": "sale",
+      "area": "3000sqft",
+      "location": "Mountain Valley, Colorado",
+      "facilities": ["Fireplace", "Hiking Trails", "Hot Tub", "Mountain View"],
+      "image": "mountain_lodge.jpg"
+    },
+    {
+      "id": 3,
+      "estate_title": "Urban Boutique Hotel",
+      "segment_name": "Hotel",
+      "description": "Indulge in city living at our boutique hotel located in the heart of downtown.",
+      "price": "$200",
+      "status": "rent",
+      "area": "2000sqft",
+      "location": "Downtown, New York",
+      "facilities": ["Luxury Suites", "Rooftop Bar", "Fitness Center", "City View"],
+      "image": "boutique_hotel.jpg"
+    },
+    {
+      "id": 4,
+      "estate_title": "Seaside Vacation Rental",
+      "segment_name": "Vacation Rental",
+      "description": "Enjoy a relaxing vacation by the sea in our charming rental cottage.",
+      "price": "$150",
+      "status": "rent",
+      "area": "1200sqft",
+      "location": "Seaside Village, Florida",
+      "facilities": ["Beach Access", "Private Patio", "Fully Equipped Kitchen", "BBQ Grill"],
+      "image": "vacation_rental.jpg"
+    },
+    {
+      "id": 5,
+      "estate_title": "Family-Friendly Guesthouse",
+      "segment_name": "Guesthouse",
+      "description": "Ideal accommodation for families with spacious rooms and a welcoming atmosphere.",
+      "price": "$100",
+      "status": "rent",
+      "area": "1800sqft",
+      "location": "Suburban Area, California",
+      "facilities": ["Family Suites", "Playground", "Outdoor Dining Area", "Garden View"],
+      "image": "guesthouse.jpg"
+    },
+    {
+      "id": 6,
+      "estate_title": "Budget Motel",
+      "segment_name": "Motel",
+      "description": "Affordable accommodation for travelers with basic amenities for a comfortable stay.",
+      "price": "$50",
+      "status": "rent",
+      "area": "800sqft",
+      "location": "Highway Route, Texas",
+      "facilities": ["Parking", "Wi-Fi", "24/7 Reception", "Air Conditioning"],
+      "image": "motel.jpg"
+    }
+  ]
+  

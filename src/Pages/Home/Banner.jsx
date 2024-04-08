@@ -38,6 +38,7 @@ const Banner = () => {
             </div>
             <div className="col-span-2 text-center mt-12">
                 <h2 className="text-4xl font-bold text-green-600 ">Welcome come Our <br /> new Resort  </h2>
+                <p></p>
             </div>
         </div>
     );
