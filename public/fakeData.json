@@ -1,75 +1,75 @@
 [
-    {
-      "id": 1,
-      "estate_title": "Luxury Beach Resort",
-      "segment_name": "Resort",
-      "description": "Experience ultimate luxury at our beachfront resort with stunning ocean views.",
-      "price": "$500",
-      "status": "rent",
-      "area": "5000sqft",
-      "location": "Beachfront, Malibu",
-      "facilities": ["Ocean View Rooms", "Infinity Pool", "Spa", "Gourmet Dining"],
-      "image": "beach_resort.jpg"
-    },
-    {
-      "id": 2,
-      "estate_title": "Cozy Mountain Lodge",
-      "segment_name": "Lodge",
-      "description": "Escape to the mountains and enjoy a cozy stay in our rustic lodge surrounded by nature.",
-      "price": "$300",
-      "status": "sale",
-      "area": "3000sqft",
-      "location": "Mountain Valley, Colorado",
-      "facilities": ["Fireplace", "Hiking Trails", "Hot Tub", "Mountain View"],
-      "image": "mountain_lodge.jpg"
-    },
-    {
-      "id": 3,
-      "estate_title": "Urban Boutique Hotel",
-      "segment_name": "Hotel",
-      "description": "Indulge in city living at our boutique hotel located in the heart of downtown.",
-      "price": "$200",
-      "status": "rent",
-      "area": "2000sqft",
-      "location": "Downtown, New York",
-      "facilities": ["Luxury Suites", "Rooftop Bar", "Fitness Center", "City View"],
-      "image": "boutique_hotel.jpg"
-    },
-    {
-      "id": 4,
-      "estate_title": "Seaside Vacation Rental",
-      "segment_name": "Vacation Rental",
-      "description": "Enjoy a relaxing vacation by the sea in our charming rental cottage.",
-      "price": "$150",
-      "status": "rent",
-      "area": "1200sqft",
-      "location": "Seaside Village, Florida",
-      "facilities": ["Beach Access", "Private Patio", "Fully Equipped Kitchen", "BBQ Grill"],
-      "image": "vacation_rental.jpg"
-    },
-    {
-      "id": 5,
-      "estate_title": "Family-Friendly Guesthouse",
-      "segment_name": "Guesthouse",
-      "description": "Ideal accommodation for families with spacious rooms and a welcoming atmosphere.",
-      "price": "$100",
-      "status": "rent",
-      "area": "1800sqft",
-      "location": "Suburban Area, California",
-      "facilities": ["Family Suites", "Playground", "Outdoor Dining Area", "Garden View"],
-      "image": "guesthouse.jpg"
-    },
-    {
-      "id": 6,
-      "estate_title": "Budget Motel",
-      "segment_name": "Motel",
-      "description": "Affordable accommodation for travelers with basic amenities for a comfortable stay.",
-      "price": "$50",
-      "status": "rent",
-      "area": "800sqft",
-      "location": "Highway Route, Texas",
-      "facilities": ["Parking", "Wi-Fi", "24/7 Reception", "Air Conditioning"],
-      "image": "motel.jpg"
-    }
-  ]
+  {
+    "id": 1,
+    "estate_title": "Luxury Beach Resort",
+    "segment_name": "Resort",
+    "description": "Experience ultimate luxury at our beachfront resort with stunning ocean views. Our resort offers a serene escape, featuring elegantly appointed rooms with breathtaking vistas of the azure waters. Indulge in world-class amenities including an infinity pool overlooking the sea, rejuvenating spa treatments, and gourmet dining experiences. Whether you're seeking a romantic getaway or a family retreat, our resort caters to your every need. Immerse yourself in the tranquility of our private beach, or explore the vibrant coastal town of Malibu. With impeccable service and unparalleled comfort, your stay at our luxury beach resort will create lasting memories.",
+    "price": "$500",
+    "status": "rent",
+    "area": "5000sqft",
+    "location": "Beachfront, Malibu",
+    "facilities": ["Ocean View Rooms", "Infinity Pool", "Spa", "Gourmet Dining"],
+    "image": "https://robbreport.com/wp-content/uploads/2023/04/Dravuni-Residence-Pool-.jpg"
+  },
   
+  {
+    "id": 2,
+    "estate_title": "Urban Boutique Hotel",
+    "segment_name": "Hotel",
+    "description": "Indulge in city living at our boutique hotel located in the heart of downtown. Experience the vibrancy of New York City while enjoying personalized service and modern comforts. Our hotel features stylishly designed suites, each offering a unique blend of luxury and functionality. Unwind at our rooftop bar with panoramic views of the skyline, or stay active at our state-of-the-art fitness center. Explore the diverse culinary scene of downtown, or simply stroll through the bustling streets soaking in the energy of the city. With its prime location and upscale amenities, our boutique hotel is the perfect choice for your urban escape.",
+    "price": "$200",
+    "status": "rent",
+    "area": "2000sqft",
+    "location": "Downtown, New York",
+    "facilities": ["Luxury Suites", "Rooftop Bar", "Fitness Center", "City View"],
+    "image": "https://www.myboutiquehotel.com/photos/14575/urban-boutique-hotel-anyang-004-27275-1110x700.jpg"
+  },
+  {
+    "id": 3,
+    "estate_title": "Seaside Vacation Rental",
+    "segment_name": "Vacation Rental",
+    "description": "Enjoy a relaxing vacation by the sea in our charming rental cottage. Nestled in the picturesque Seaside Village of Florida, our vacation rental offers a cozy and intimate retreat for your beach getaway. The cottage boasts a private patio where you can enjoy the gentle ocean breeze and breathtaking views. Inside, you'll find a fully equipped kitchen perfect for preparing home-cooked meals and a comfortable living space for lounging with loved ones. Spend your days soaking up the sun on the nearby beach, or explore the local shops and restaurants. With its tranquil surroundings and convenient amenities, our seaside rental is your home away from home.",
+    "price": "$150",
+    "status": "rent",
+    "area": "1200sqft",
+    "location": "Seaside Village, Florida",
+    "facilities": ["Beach Access", "Private Patio", "Fully Equipped Kitchen", "BBQ Grill"],
+    "image": "https://gallery.streamlinevrs.com/units-gallery/00/05/C5/thumbnail_162407344.jpeg"
+  },
+  {
+    "id": 4,
+    "estate_title": "Cozy Mountain Lodge",
+    "segment_name": "Lodge",
+    "description": "Escape to the mountains and enjoy a cozy stay in our rustic lodge surrounded by nature. Our lodge offers a warm and inviting atmosphere, where you can unwind by the fireplace after a day of outdoor adventures. Explore scenic hiking trails, soak in the hot tub under the starry sky, or simply relax and enjoy the peaceful mountain views. Ideal for nature lovers and outdoor enthusiasts, our lodge provides comfortable accommodations with modern amenities. Whether you're seeking solitude or quality time with loved ones, our mountain retreat offers the perfect setting for your getaway.",
+    "price": "$300",
+    "status": "sale",
+    "area": "3000sqft",
+    "location": "Mountain Valley, Colorado",
+    "facilities": ["Fireplace", "Hiking Trails", "Hot Tub", "Mountain View"],
+    "image": "https://cdn.onekindesign.com/wp-content/uploads/2017/05/Contemporary-Mountain-Home-Dennis-Zirbel-04-1-Kindesign.jpg"
+  },
+  {
+    "id": 5,
+    "estate_title": "Family-Friendly Guesthouse",
+    "segment_name": "Guesthouse",
+    "description": "Ideal accommodation for families with spacious rooms and a welcoming atmosphere. Our guesthouse offers comfortable and affordable lodging options for families visiting California. Located in a peaceful suburban area, our guesthouse features family suites with ample space for everyone to relax and unwind. Kids will love the on-site playground, while parents can enjoy al fresco dining in the outdoor area. Explore the nearby attractions or simply enjoy quality time together in the comfort of our guesthouse. With its family-friendly amenities and convenient location, our guesthouse is the perfect choice for your next family vacation.",
+    "price": "$100",
+    "status": "rent",
+    "area": "1800sqft",
+    "location": "Suburban Area, California",
+    "facilities": ["Family Suites", "Playground", "Outdoor Dining Area", "Garden View"],
+    "image": "https://dexauc1l0pcnj.cloudfront.net/Content/images/blog/7-ideas-to-make-your-hotel-feel-more-family-friendly.jpg"
+  },
+  {
+    "id": 6,
+    "estate_title": "Budget Motel",
+    "segment_name": "Motel",
+    "description": "Affordable accommodation for travelers with basic amenities for a comfortable stay. Our budget motel offers affordable lodging options for travelers passing through Texas. Conveniently located along the highway route, our motel provides easy access to nearby attractions and destinations. Each room is equipped with essential amenities including parking, Wi-Fi, and air conditioning, ensuring a comfortable stay for our guests. Whether you're traveling for business or leisure, our motel provides a convenient and budget-friendly option for your overnight stay.",
+    "price": "$50",
+    "status": "rent",
+    "area": "800sqft",
+    "location": "Highway Route, Texas",
+    "facilities": ["Parking", "Wi-Fi", "24/7 Reception", "Air Conditioning"],
+    "image": "https://images.trvl-media.com/lodging/12000000/11510000/11505000/11504952/e74ed065.jpg?impolicy=resizecrop&rw=500&ra=fit"
+  }
+]

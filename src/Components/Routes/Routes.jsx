@@ -5,6 +5,7 @@ import ErrorPage from "../../Pages/Error/ErrorPage";
 import About from "../../Pages/about/About";
 import Login from "../../Pages/Login/Login";
 import Register from "../../Pages/Register/Register";
+import Properties from "../../Pages/properties/Properties";
 
 const router=createBrowserRouter([
     {
@@ -16,6 +17,10 @@ const router=createBrowserRouter([
                 path: '/',
                 element: <Home></Home>,
                 loader:()=>fetch('fakeData.json')
+            },
+            {
+                path: '/properties',
+                element: <Properties></Properties>
             },
             {
                 path: '/about',

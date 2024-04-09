@@ -2,7 +2,7 @@
 
 const Banner = () => {
     return (
-        <div className="grid grid-cols-1 lg:grid-cols-5 bg-amber-50">
+        <div className="grid grid-cols-1 md:grid-cols-5 bg-amber-50">
             <div className="col-span-3 carousel h-72 lg:h-[470px] w-full bg-amber-50 py-5">
                 <div id="slide1" className="carousel-item relative w-full ">
                     <img src="https://i.ibb.co/6Ynsp1H/sonevajani-1880.webp" className="w-full rounded-full" />
@@ -36,9 +36,10 @@ const Banner = () => {
                     </div>
                 </div>
             </div>
-            <div className="col-span-2 text-center mt-12">
-                <h2 className="text-4xl font-bold text-green-600 ">Welcome come Our <br /> new Resort  </h2>
-                <p></p>
+            <div className="col-span-2 text-center mt-20 ">
+                <h2 className="text-4xl font-bold text-green-600 mb-4">Celebrate Where Every  <br /> Guest Feels at Home</h2>
+                <p>Welcome to our hospitality haven! Discover exceptional, <br /> exquisite dining experiences, and personalized service <br />  tailored to make your stay unforgettable.</p>
+                <button className="btn btn-secondary mt-9">Explore More</button>
             </div>
         </div>
     );
