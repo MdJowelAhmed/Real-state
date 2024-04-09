@@ -1,21 +1,28 @@
 import { Link } from "react-router-dom";
 import Navbar from "../../Components/ShareComponents/Navbar";
-import { useForm } from "react-hook-form"
+import { useForm } from "react-hook-form";
+import { FaEye, FaEyeSlash } from "react-icons/fa"
+import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 
 const Register = () => {
+    const [showPassword,setShowPassword]=useState(false)
     const {
         register,
         handleSubmit,
-        watch,
-        formState: { errors },
-      } = useForm()
 
-      const onSubmit=data=>{
+        formState: { errors },
+    } = useForm()
+
+    const onSubmit = data => {
         console.log(data)
-      }
+    }
     return (
         <div>
+            <Helmet>
+                <title>Hospitality / Register</title>
+            </Helmet>
             <Navbar></Navbar>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col">
@@ -29,7 +36,7 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">Your Name</span>
                                 </label>
-                                <input type="text" name="Name" placeholder="Your Name" className="input input-bordered" {...register("Name", { required: true })}/>
+                                <input type="text" name="Name" placeholder="Your Name" className="input input-bordered" {...register("Name", { required: true })} />
                                 {errors.Name && <span className="text-red-600 text-sm">This field is required</span>}
                             </div>
                             <div className="form-control">
@@ -39,20 +46,39 @@ const Register = () => {
                                 <input type="email" name="Email" placeholder="Your Email" className="input input-bordered" {...register("Email", { required: true })} />
                                 {errors.Email && <span className="text-red-600 text-sm">This field is required</span>}
                             </div>
-                          
+
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Image URL</span>
                                 </label>
                                 <input type="text" name="image" placeholder="Image URL" className="input input-bordered" />
                             </div>
-                            <div className="form-control">
+                            <div className="form-control relative">
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type="password" name="Password" placeholder="password" className="input input-bordered" {...register("Password", { required: true })} />
-                                {errors.Password && <span className="text-red-600 text-sm">This field is required</span>}
-                               
+                                <input type={showPassword ?"text" :"password"} name="Password" placeholder="password" className="input input-bordered" {...register("Password", {
+                                    required: {
+                                        value: true,
+                                        message: "Your must fill the password field"
+                                    },
+                                    minLength: {
+                                        value: 6,
+                                        message: 'Password must min 6 characters'
+                                    },
+                                    pattern: {
+                                        value: /^[A-Za-z]+$/i,
+                                        message: 'Uppercase and lowerCase letter mixed'
+                                    }
+                                })} />
+                                {errors.Password && <span className="text-red-600 text-sm">{errors.Password.message}</span>}
+                                <div onClick={()=>setShowPassword(!showPassword)} className="absolute ml-72 mt-12">
+                                    {
+                                       showPassword ?  <FaEye /> :  <FaEyeSlash />
+                                    }
+                                   
+                                   
+                                </div>
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Register</button>

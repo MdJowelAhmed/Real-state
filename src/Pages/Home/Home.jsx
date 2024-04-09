@@ -3,6 +3,7 @@ import Navbar from "../../Components/ShareComponents/Navbar";
 import Banner from "./Banner";
 import { useLoaderData } from "react-router-dom";
 import Service from "./Service";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -11,6 +12,9 @@ const Home = () => {
     console.log(services)
     return (
         <div className="my-12 space-y-12">
+            <Helmet>
+                <title>Hospitalities / Home</title>
+            </Helmet>
             <Navbar></Navbar>
             <Banner></Banner>
             <div className="my-16">

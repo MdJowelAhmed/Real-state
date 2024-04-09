@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
 const Service = ({ service }) => {
-    const { estate_title, segment_name, description, price, image, status ,location} = service
+    const {id, estate_title, segment_name, description, price, image, status ,location} = service
     return (
         <div>
             
@@ -18,7 +18,7 @@ const Service = ({ service }) => {
                         <div className="flex ">
                           
                             <p className='text-green-800 text-xl'>{location}</p>
-                            <Link to='/properties'> <button className="btn btn-primary">“View Property</button></Link>
+                            <Link to={`/properties/${id}`} ><button className="btn btn-primary">ViewProperty</button></Link>
                         </div>
                     </div>
                 </div>

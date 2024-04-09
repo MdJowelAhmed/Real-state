@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
 import Navbar from "../../Components/ShareComponents/Navbar";
+import { Helmet } from "react-helmet-async";
 
 
 
 const Login = () => {
     return (
         <div>
+             <Helmet>
+                <title>Hospitalities / Login</title>
+            </Helmet>
             <Navbar></Navbar>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col">
