@@ -4,21 +4,28 @@ import Banner from "./Banner";
 import { useLoaderData } from "react-router-dom";
 import Service from "./Service";
 
- 
+
 
 const Home = () => {
-    const services=useLoaderData()
+    const services = useLoaderData()
     console.log(services)
     return (
-        <div>
+        <div className="my-12 space-y-12">
             <Navbar></Navbar>
-           <Banner></Banner>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {
-                    services.map(service=> <Service key={service.id} service={service}></Service>)
-                }
+            <Banner></Banner>
+            <div className="my-16">
+                <div className="text-center space-y-5 mb-10">
+                    <h2 className="text-green-400 text-4xl font-bold">Our Service </h2>
+                    <p className="text-green-600">Hospitality refers to the friendly and generous reception and entertainment  <br /> of guests, visitors, or strangers. It encompasses  various industries  <br /> including hotels, restaurants</p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    {
+                        services.map(service => <Service key={service.id} service={service}></Service>)
+                    }
+                </div>
             </div>
-           <Footer></Footer>
+            <Footer></Footer>
         </div>
     );
 };
