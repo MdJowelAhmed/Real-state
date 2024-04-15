@@ -2,21 +2,32 @@ import { Link } from "react-router-dom";
 import Navbar from "../../Components/ShareComponents/Navbar";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa"
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
 
 
 const Register = () => {
     const [showPassword,setShowPassword]=useState(false)
+    const {createUser}=useContext(AuthContext)
+    // console.log(createUser)
     const {
         register,
         handleSubmit,
-
         formState: { errors },
     } = useForm()
 
     const onSubmit = data => {
-        console.log(data)
+        // console.log(data)
+        const { email, password } = data;
+        // console.log(data)
+        createUser(email,password)
+        .then(result=>{
+            console.log(result)
+        })
+        // .catch(error=>{
+        //     console.log(error)
+        // })
     }
     return (
         <div>
@@ -66,10 +77,10 @@ const Register = () => {
                                         value: 6,
                                         message: 'Password must min 6 characters'
                                     },
-                                    pattern: {
-                                        value: /^[A-Za-z]+$/i,
-                                        message: 'Uppercase and lowerCase letter mixed'
-                                    }
+                                    // pattern: {
+                                    //     value: /^[A-Za-z]+$/i,
+                                    //     message: 'Uppercase and lowerCase letter mixed'
+                                    // }
                                 })} />
                                 {errors.Password && <span className="text-red-600 text-sm">{errors.Password.message}</span>}
                                 <div onClick={()=>setShowPassword(!showPassword)} className="absolute ml-72 mt-12">

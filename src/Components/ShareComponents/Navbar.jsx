@@ -1,15 +1,21 @@
 import { NavLink } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect } from 'react'
 
 
 const Navbar = () => {
+    useEffect(() => {
+        Aos.init()
+    }, [])
     const navLinks = <>
         <li> <NavLink to='/'><button className="text-xl font-bold" >Home</button></NavLink> </li>
         <li> <NavLink to='/login'><button className="text-xl font-bold" >Login</button></NavLink> </li>
         <li> <NavLink to='/about'><button className="text-xl font-bold" >About Us</button></NavLink> </li>
     </>
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-red-100 rounded-3xl" data-aos="zoom-out-down"  data-aos-duration="2000" >
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

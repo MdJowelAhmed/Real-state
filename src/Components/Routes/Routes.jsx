@@ -16,12 +16,12 @@ const router=createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader:()=>fetch('fakeData.json')
+                loader:()=>fetch('/fakeData.json')
             },
             {
                 path: '/properties/:id',
                 element: <Properties></Properties>,
-                loader:()=>fetch('fakeData.json')
+                loader:()=>fetch('/fakeData.json')
             },
             {
                 path: '/about',

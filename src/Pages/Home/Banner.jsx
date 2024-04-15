@@ -1,6 +1,7 @@
 
 
 const Banner = () => {
+  
     return (
         <div className="grid grid-cols-1 md:grid-cols-5 bg-amber-50">
             <div className="col-span-3 carousel h-72 lg:h-[470px] w-full bg-amber-50 py-5">
