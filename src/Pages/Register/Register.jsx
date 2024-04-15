@@ -18,6 +18,7 @@ const Register = () => {
     } = useForm()
 
     const onSubmit = data => {
+       
         // console.log(data)
         const { email, password } = data;
         // console.log(data)
@@ -25,9 +26,9 @@ const Register = () => {
         .then(result=>{
             console.log(result)
         })
-        // .catch(error=>{
-        //     console.log(error)
-        // })
+        .catch(error=>{
+            console.log(error)
+        })
     }
     return (
         <div>
