@@ -21,10 +21,10 @@ const Register = () => {
        
         // console.log(data)
         const { email, password } = data;
-        // console.log(data)
+        console.log(email,password)
         createUser(email,password)
         .then(result=>{
-            console.log(result)
+            console.log(result.user)
         })
         .catch(error=>{
             console.log(error)
@@ -55,7 +55,7 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">Email</span>
                                 </label>
-                                <input type="email" name="Email" placeholder="Your Email" className="input input-bordered" {...register("Email", { required: true })} />
+                                <input type="email" name="Email" placeholder="Your Email" className="input input-bordered" {...register("email", { required: true })} />
                                 {errors.Email && <span className="text-red-600 text-sm">This field is required</span>}
                             </div>
 
@@ -69,7 +69,7 @@ const Register = () => {
                                 <label className="label">
                                     <span className="label-text">Password</span>
                                 </label>
-                                <input type={showPassword ?"text" :"password"} name="Password" placeholder="password" className="input input-bordered" {...register("Password", {
+                                <input type={showPassword ?"text" :"password"} name="Password" placeholder="password" className="input input-bordered" {...register("password", {
                                     required: {
                                         value: true,
                                         message: "Your must fill the password field"

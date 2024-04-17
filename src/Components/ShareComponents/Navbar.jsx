@@ -15,6 +15,8 @@ const Navbar = () => {
         <li> <NavLink to='/'><button className="text-xl font-bold" >Home</button></NavLink> </li>
         <li> <NavLink to='/login'><button className="text-xl font-bold" >Login</button></NavLink> </li>
         <li> <NavLink to='/about'><button className="text-xl font-bold" >About Us</button></NavLink> </li>
+        <li> <NavLink to='/user'><button className="text-xl font-bold" >UserProfile</button></NavLink> </li>
+        <li> <NavLink to='/update'><button className="text-xl font-bold" >UpdateProfile</button></NavLink> </li>
     </>
     return (
         <div className="navbar bg-red-100 rounded-3xl" data-aos="zoom-out-down" data-aos-duration="2000" >
@@ -47,14 +49,14 @@ const Navbar = () => {
                                     <img src={user?.photoURL || <CgProfile /> } />
                                 </div>
                             </label>
-                            <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <ul tabIndex={0} className="menu  dropdown-content  z-[1]  shadow bg-base-100 rounded-box w-32">
                                 <li>
                                     <button className="btn btn-sm  btn-ghost">{user?.displayName||'user name not found'}</button>
 
                                 </li>
                                 <li>
                                     <button
-                                        onClick={logout}
+                                        onClick={logOut}
                                         className="btn btn-sm  btn-ghost">Logout</button>
 
                                 </li>
