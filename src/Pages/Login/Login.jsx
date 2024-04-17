@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../../Components/ShareComponents/Navbar";
 import { Helmet } from "react-helmet-async";
 import { useContext } from "react";
@@ -11,6 +11,8 @@ import { FaGithub } from "react-icons/fa";
 
 const Login = () => {
     const { login, googleLogin, githubLogin } = useContext(AuthContext)
+    const navigate=useNavigate()
+    const location=useLocation()
 
     const {
         register,
@@ -30,6 +32,14 @@ const Login = () => {
             .catch(error => {
                 console.log(error)
             })
+    }
+    const handleSocialLogin =socialprovider=>{
+        socialprovider()
+        .then(result=>{
+           if(result.user){
+            navigate(location?.state || "/")
+           }
+        })
     }
     return (
         <div>
@@ -73,9 +83,9 @@ const Login = () => {
                         <div className="mx-5 mb-5 flex justify-between">
                             <div>
                                
-                                <button onClick={() => googleLogin()} className="btn btn-accent"> <FaGoogle /> Google</button>
+                                <button onClick={() =>handleSocialLogin(googleLogin)} className="btn btn-accent"> <FaGoogle /> Google</button>
                             </div>
-                            <button onClick={() => githubLogin()} className="btn btn-accent"><FaGithub /> Github</button>
+                            <button onClick={() =>handleSocialLogin(githubLogin)} className="btn btn-accent"><FaGithub /> Github</button>
                         </div>
                     </div>
                 </div>

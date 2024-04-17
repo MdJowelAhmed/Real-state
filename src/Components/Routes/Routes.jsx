@@ -23,7 +23,9 @@ const router=createBrowserRouter([
             },
             {
                 path: '/properties/:id',
-                element: <Properties></Properties>,
+                element: <PrivateRoute>
+                    <Properties></Properties>
+                </PrivateRoute>,
                 loader:()=>fetch('/fakeData.json')
             },
             {
