@@ -21,7 +21,7 @@ const Footer = () => {
                 </div>
             </nav>
             <aside>
-                <p> - All right reserved by Md Jowel Ahmed</p>
+                <p className="text-amber-500 text-xl"> - All right reserved by Md Jowel Ahmed</p>
             </aside>
         </footer>
     );

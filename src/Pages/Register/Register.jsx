@@ -99,10 +99,10 @@ const Register = () => {
                                         message: 'Password must min 6 characters'
                                     },
                                     pattern: {
-                                        value: '^(?=.*[a-z])(?=.*[A-Z]).{6,}$'
-                                        ,
+                                        value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,}$/,
+                                       
                                         // value: '[A-Z]',
-                                        message: 'Uppercase and lowerCase letter '
+                                        message: 'Uppercase and lowerCase letter also number added '
                                     }
                                 })} />
                                 {errors.password && <span className="text-red-600 text-sm">{errors.password.message}</span>}
@@ -122,9 +122,9 @@ const Register = () => {
                         {
                             regError && <span className="text-red-600 text-center mb-3">{regError} </span>
                         }
-                        {/* {
+                        {
                             success && <span>{toast.success('success')} </span>
-                        } */}
+                        }
                         <div className="text-center mb-5">
                             <p>Have you account? please <span><Link to='/login' className="text-blue-600 font-semibold">Login</Link></span></p>
                         </div>
