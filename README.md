@@ -1,6 +1,6 @@
 # Welcome to Hospitality 
 
-Live Site URL: [Hospitality ](https://www.hospitalityhaven.com)
+Live Site URL: [Hospitality ](https://fir-hospitalities.web.app/)
 
 ### Features and Characteristics:
 
