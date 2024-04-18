@@ -2,11 +2,15 @@
 
 const Footer = () => {
     return (
-        <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded">
+        <footer className="footer footer-center p-10 bg-base-200 text-base-content rounded my-7 rounded-3xl">
+           
             <nav className="grid grid-flow-col gap-4">
+            <div>
+                <img className="rounded-full w-32" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgsq0ob92B1xbT6ohZ7qMFSkaJfM6uEDrE1eLhhKgsYH2rUEgoZPx1mqYZlCjdlNTYEjM&usqp=CAU" alt="" />
+            </div>
                 <a className="link link-hover">About us</a>
                 <a className="link link-hover">Contact</a>
-                <a className="link link-hover">Jobs</a>
+                <a className="link link-hover">Category</a>
                 <a className="link link-hover">Press kit</a>
             </nav>
             <nav>
@@ -17,7 +21,7 @@ const Footer = () => {
                 </div>
             </nav>
             <aside>
-                <p>Copyright © 2024 - All right reserved by ACME Industries Ltd</p>
+                <p> - All right reserved by Md Jowel Ahmed</p>
             </aside>
         </footer>
     );

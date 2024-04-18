@@ -1,8 +1,8 @@
-
+import 'animate.css';
 const Choice = () => {
     return (
-        <div>
-            <h2 className="text-4xl text-orange-600 text-center">Why Choice us?</h2>
+        <div data-aos="zoom-in"   data-aos-duration="3000">
+            <h2 className="text-4xl text-orange-600 text-center animate__animated animate__bounce">Why Choice us?</h2>
             <p className="text-sm text-orange-600 text-center">Choice US Hospitalities" could refer to a variety of entities in the hospitality industry including hotels,,<br /> restaurants, or hospitality management companies operating in the United States. <br /> Here's a brief description of why one might choose them</p>
 
             <div className="grid md:grid-cols-5 grid-cols-1 my-10">

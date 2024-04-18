@@ -2,6 +2,8 @@ import { useContext } from "react";
 import Footer from "../ShareComponents/Footer";
 import Navbar from "../ShareComponents/Navbar";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import { Helmet } from "react-helmet-async";
+
 
 
 
@@ -23,6 +25,9 @@ const UpdateProfile = () => {
     }
     return (
         <div>
+             <Helmet>
+                <title>Hospitalities / Update</title>
+            </Helmet>
             <Navbar></Navbar>
             <div className="hero min-h-screen bg-base-200 my-10">
                 <div className="hero-content flex-col ">
@@ -36,13 +41,13 @@ const UpdateProfile = () => {
                                 <label className="label">
                                     <span className="label-text">Name</span>
                                 </label>
-                                <input type="text" placeholder="Your name" className="input input-bordered" required />
+                                <input type="text" name="name" placeholder="Your name" className="input input-bordered" required />
                             </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Image</span>
                                 </label>
-                                <input type="text" placeholder="image url" className="input input-bordered" required />
+                                <input type="text" name="image" placeholder="image url" className="input input-bordered" required />
                               
                             </div>
                             <div className="form-control mt-6">

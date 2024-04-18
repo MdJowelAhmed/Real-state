@@ -7,8 +7,14 @@ import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
 
 
+import Swal from 'sweetalert2'
+import Footer from "../../Components/ShareComponents/Footer";
+
+
 const Register = () => {
     const [showPassword,setShowPassword]=useState(false)
+    const [regError,setRegError]=useState('')
+    const [success,setSuccess]=useState('')
     const {createUser,updateProfile}=useContext(AuthContext)
     const navigate=useNavigate()
     const location=useLocation()
@@ -24,16 +30,24 @@ const Register = () => {
         // console.log(data)
         const { email, password,name,image } = data;
         // console.log(email,password)
+        setRegError('')
         createUser(email,password)
         .then(result=>{
             // updateProfile(name,image)
            if(result.user){
+            Swal.fire({
+                title: "Register successFull!",
+                text: "You clicked the button!",
+                icon: "success"
+              });
             navigate(location?.state || "/")
+            setSuccess('register success')
            }
                 
          })
         .catch(error=>{
             console.log(error)
+            setRegError(error.message)
         })
     }
     return (
@@ -48,7 +62,7 @@ const Register = () => {
                         <h1 className="text-5xl font-bold">Register First!</h1>
 
                     </div>
-                    <div className="card shrink-0  min-w-96  shadow-2xl bg-base-100">
+                    <div className="card shrink-0  lg:min-w-96  shadow-2xl bg-base-100">
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                             <div className="form-control">
                                 <label className="label">
@@ -78,15 +92,17 @@ const Register = () => {
                                 <input type={showPassword ?"text" :"password"} name="Password" placeholder="password" className="input input-bordered" {...register("password", {
                                     required: {
                                         value: true,
-                                        message: "Your must fill the password field"
+                                        message: "You must fill the password field"
                                     },
-                                    // minLength: {
-                                    //     value: 6,
-                                    //     message: 'Password must min 6 characters'
-                                    // },
+                                    minLength: {
+                                        value: 6,
+                                        message: 'Password must min 6 characters'
+                                    },
                                     pattern: {
-                                        value:  '^(?=.*[a-z])(?=.*[A-Z]).{6,}$',
-                                        message: 'Uppercase and lowerCase letter mixed'
+                                        value: '^(?=.*[a-z])(?=.*[A-Z]).{6,}$'
+                                        ,
+                                        // value: '[A-Z]',
+                                        message: 'Uppercase and lowerCase letter '
                                     }
                                 })} />
                                 {errors.password && <span className="text-red-600 text-sm">{errors.password.message}</span>}
@@ -100,14 +116,22 @@ const Register = () => {
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Register</button>
+                             
                             </div>
                         </form>
+                        {
+                            regError && <span className="text-red-600 text-center mb-3">{regError} </span>
+                        }
+                        {/* {
+                            success && <span>{toast.success('success')} </span>
+                        } */}
                         <div className="text-center mb-5">
                             <p>Have you account? please <span><Link to='/login' className="text-blue-600 font-semibold">Login</Link></span></p>
                         </div>
                     </div>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };

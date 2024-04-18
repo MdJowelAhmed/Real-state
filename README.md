@@ -1,6 +1,6 @@
-# Welcome to Hospitality Haven
+# Welcome to Hospitality 
 
-Live Site URL: [Hospitality Haven](https://www.hospitalityhaven.com)
+Live Site URL: [Hospitality ](https://www.hospitalityhaven.com)
 
 ### Features and Characteristics:
 
@@ -16,4 +16,4 @@ Live Site URL: [Hospitality Haven](https://www.hospitalityhaven.com)
   
 ---
 
-npm Package Used : `react-form-hook`, `Aos`, `animate.css`,
+npm Package Used : `react-form-hook`, `Aos`, `animate.css`

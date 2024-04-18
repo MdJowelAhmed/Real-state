@@ -1,11 +1,14 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../../Components/ShareComponents/Navbar";
 import { Helmet } from "react-helmet-async";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Components/AuthProvider/AuthProvider";
 import { useForm } from "react-hook-form";
 import { FaGoogle } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { ToastContainer, toast } from 'react-toastify';
+import Swal from 'sweetalert2'
+import Footer from "../../Components/ShareComponents/Footer";
 
 
 
@@ -13,6 +16,7 @@ const Login = () => {
     const { login, googleLogin, githubLogin } = useContext(AuthContext)
     const navigate=useNavigate()
     const location=useLocation()
+    const [loginError,setLoginError]=useState('')
 
     const {
         register,
@@ -24,21 +28,48 @@ const Login = () => {
 
         // console.log(data)
         const { email, password } = data;
+        if(email.length <0){
+            setLoginError('please email ')
+            return
+        }
+        if(password.length < 0){
+            setLoginError('password min 6 letter')
+            return
+        }
         // console.log(data)
+        setLoginError('')
         login(email, password)
+        
             .then(result => {
-                console.log(result.user)
+                if(result.user){
+                    Swal.fire({
+                        title: "Login success!",
+                        text: "You clicked the button!",
+                        icon: "success"
+                      });
+                    navigate(location?.state || "/")
+                   }
             })
             .catch(error => {
                 console.log(error)
+                setLoginError(error.message)
             })
     }
     const handleSocialLogin =socialprovider=>{
         socialprovider()
         .then(result=>{
            if(result.user){
+            Swal.fire({
+                title: "Good job!",
+                text: "You clicked the button!",
+                icon: "success"
+              });
             navigate(location?.state || "/")
            }
+        })
+        .catch(error=>{
+            console.log(error)
+           
         })
     }
     return (
@@ -53,7 +84,7 @@ const Login = () => {
                         <h1 className="text-5xl font-bold">Login now!</h1>
 
                     </div>
-                    <div className="card shrink-0  min-w-96  shadow-2xl bg-base-100">
+                    <div className="card shrink-0  lg:min-w-96  shadow-2xl bg-base-100">
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                             <div className="form-control">
                                 <label className="label">
@@ -74,8 +105,12 @@ const Login = () => {
                             </div>
                             <div className="form-control mt-6">
                                 <button className="btn btn-primary">Login</button>
+                                <ToastContainer />
                             </div>
                         </form>
+                        {
+                            loginError && <span className="text-red-500 text-center mb-3">{loginError} </span>
+                        }
                         <div className="text-center mb-5">
                             <p>Did not have account? please <span><Link to='/register' className="text-blue-600 font-semibold">Register</Link></span></p>
                         </div>
@@ -90,6 +125,7 @@ const Login = () => {
                     </div>
                 </div>
             </div>
+            <Footer></Footer>
         </div>
     );
 };
