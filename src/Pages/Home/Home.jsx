@@ -4,6 +4,7 @@ import Banner from "./Banner";
 import { useLoaderData } from "react-router-dom";
 import Service from "./Service";
 import { Helmet } from "react-helmet-async";
+import Choice from "./Choice";
 
 
 
@@ -29,6 +30,7 @@ const Home = () => {
                     }
                 </div>
             </div>
+            <Choice></Choice>
             <Footer></Footer>
         </div>
     );

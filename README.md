@@ -1,8 +1,19 @@
-# React + Vite
+# Welcome to Hospitality Haven
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live Site URL: [Hospitality Haven](https://www.hospitalityhaven.com)
 
-Currently, two official plugins are available:
+### Features and Characteristics:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **User-friendly Interface**: Our website offers a seamless and intuitive browsing experience for users, making it easy to find information about various hospitality services and accommodations.
+  
+- **Responsive Design**: Hospitality Haven is optimized for all devices, ensuring that users can access the site conveniently from desktops, tablets, and smartphones.
+  
+- **Interactive Animations**: We employ the `animate.css` npm package to add engaging animations that enhance the user experience and draw attention to important content.
+  
+- **Efficient Form Handling**: With the help of the `react-form-hook` npm package, we have streamlined form submission processes, making it simple for users to inquire, book, or provide feedback.
+  
+- **Smooth Scrolling and Transitions**: Leveraging the `Aos` package, our website incorporates smooth scrolling and transitions, creating a visually pleasing browsing experience for visitors.
+  
+---
+
+npm Package Used : `react-form-hook`, `Aos`, `animate.css`,
